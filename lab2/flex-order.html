@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flexbox align 0 — starting code</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 70%;
+        max-width: 960px;
+        margin: 20px auto;
+      }
+
+      button {
+        font-size: 18px;
+        line-height: 1.5;
+        width: 15%;
+      }
+      
+
+      div {
+        height: 100px;
+        border: 1px solid black;
+      }
+
+      /* Add your flexbox CSS below here */
+      div {
+        /* We declare that we want to use flexboxes, and that the div will be the container.
+        If we did not have this property, we could not use other flex CSS properties */
+        display: flex;
+
+        /* Align item will position each flex item instead of stretching (default) it will
+        center them vertically */
+        align-items: center;
+
+        /* Flex direction determines the direction of main axist ie. row direction makes the flex items show up side by side, not stacked 
+        on top of each other */
+        flex-direction: row;
+        /* flex-wrap: wrap; Flex wrap doese not appear to do anything becuase the button width is small and they all fit on one line  */
+
+        justify-content: space-around;
+      }
+
+      button:first-child {
+        align-self: flex-end;
+        order: 1;
+      }
+
+      button:last-child {
+        align-self:flex-start;
+        order: -1;
+      }
+
+      button:nth-child(2)
+      {
+        align-self:flex-start;
+      }
+
+      button:nth-child(4)
+      {
+        align-self:flex-end;
+      }
+
+
+      
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- Div is the container and the buttons are each flex items -->
+      <button>Smile</button>
+      <button>Laugh</button>
+      <button>Wink</button>
+      <button>Shrug</button>
+      <button>Blush</button>
+    </div>
+  </body>
+</html>
