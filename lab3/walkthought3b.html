@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthought 3</title>
+    <style>
+        
+        .container {
+            /* We selected this container using the . symbol to represent the class */
+            display: grid;
+            grid-template-areas: 
+                    "nav nav nav"
+                    "aside video1 video2"
+                    "foot foot foot";
+        }
+
+        div:first-child {
+            grid-area: nav;
+        }
+
+        div:nth-child(2) {
+            grid-area: aside;
+        }
+
+        div:nth-child(3) {
+            grid-area: video1;
+        }
+
+        div:nth-child(4) {
+            grid-area: video2;
+        }
+
+        div:nth-child(5) {
+            grid-area: foot;
+        }
+
+        div {
+            border: 1px solid black;
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+        <div>Seven</div>
+        <div>Eight</div>
+        <div>Nine</div>
+      </div>
+</body>
+</html>

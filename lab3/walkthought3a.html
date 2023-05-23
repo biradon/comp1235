@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthought 3</title>
+    <style>
+        
+        .container {
+            /* We selected this container using the . symbol to represent the class */
+            display: grid;
+            /* We're creatting 3 column with 300px */
+            /* grid-template-columns: 200px 200px 200px; */
+
+            /* We're creating 3 row with min 100px and 200px max and 2 column with min 30% of screen and max 50% of screen */
+            /* grid-template: repeat(3, minmax(100px,200px))/ repeat(2, minmax(30%,50%)); */
+
+            /* grid-template-rows: repeat(3, 2fr);
+            grid-template-columns: repeat(2, 2fr); */
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 100px;
+        }
+
+        div:first-child {
+            grid-column: 1 / 3;
+            grid-row: 1 / 4;
+        }
+
+        div:last-child {
+            grid-column: 1 / 4;
+        }
+
+        div {
+            border: 1px solid black;
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+      </div>
+</body>
+</html>
