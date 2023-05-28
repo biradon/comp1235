@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 
-
+/* Header and Navigation bar */
 
 header {
     font-family: 'Nunito Sans', sans-serif;
@@ -33,6 +33,7 @@ header {
 }
 
 
+/* Main content */
 
 main  {
     font-family: 'Ubuntu', sans-serif;
@@ -74,7 +75,7 @@ main  {
 .course_description { grid-area: description; }
 
    
-
+/* Footer area */
 footer  {
     font-family: 'Nunito Sans', sans-serif;
     max-width: 960px;
@@ -92,6 +93,9 @@ footer  {
     text-align: center;
     justify-content: space-around;
 }
+
+
+/* Responsive for small screen */
 
 @media only screen and (max-width: 706px) {
     #course-grid {
