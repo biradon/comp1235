@@ -5,16 +5,17 @@
 
 header {
     font-family: 'Nunito Sans', sans-serif;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
-    width: 100%;
+    max-width: 960px;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
    }
    
 
 #nav-links {
     height: 100px;
-    width: 960px;
     box-sizing: border-box;
     border: 2px solid black;
     display:flex;
@@ -92,7 +93,7 @@ footer  {
     justify-content: space-around;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 706px) {
     #course-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -101,7 +102,7 @@ footer  {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 470px) {
 #course-grid {
     grid-template-columns: 1fr;
 }
