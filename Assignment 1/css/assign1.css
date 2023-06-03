@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
+
+
+header {
+    font-family: 'Nunito Sans', sans-serif;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+   }
+   
+
+#nav-links {
+    height: 100px;
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 2px solid black;
+    display:flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 15px 10px;
+    font-size: 18px;
+    padding-top: 30px;
+    background-color: #F7E1AE;
+}
+
+#home {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+
+main  {
+    font-family: 'Ubuntu', sans-serif;
+    max-width: 960px;
+}
+
+#page_title {
+    grid-column: 1 / 4;
+    padding-left: 7px;
+}
+
+#course-grid {
+    max-width: 960px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px auto;
+    gap: 15px 10px;
+    background-color: #FFF8D6;
+    color: #617A55;
+}
+
+
+.course_item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 4fr;
+    grid-template-areas:
+            "image number"
+            "image title"
+            "image description";
+    gap: 15px 10px;
+    padding: 3px 8px 3px 8px;
+}
+
+.course_image { grid-area: image; }
+.course_number { grid-area: number; }
+.course_title { grid-area: title; }
+.course_description { grid-area: description; }
+
+   
+
+footer  {
+    font-family: 'Nunito Sans', sans-serif;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    background-color: #A4D0A4;
+    color: #617A55;
+}
+
+#footer-items {
+    display:flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-align: center;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 640px) {
+    #course-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+  #page_title {
+    grid-column: span 2;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+#course-grid {
+    grid-template-columns: 1fr;
+}
+#page_title {
+    grid-column: span 1;
+}
+}
+
+@media only screen and (max-width: 960px) {
+#nav-links {
+    width: 100%;
+    padding: auto;
+}
+}
