@@ -28,3 +28,19 @@ describe('indexMultipler', () =>  {
         expect(indexMultipler([1, 2, 3, 4, 5])).to.deep.equal(40)
     })
 })
+
+describe('filteredJSON', () =>  {
+    it('Filter the JSON object with specific condition',  () => {
+        expect(filteredJSON(([{id: 1, u: "batman"}])).to.deep.equal([]))
+        expect(filteredJSON(([{id: 11, u: "spidey"}])).to.deep.equal([{id: 11, u: "spidey"}]))
+
+    })
+})
+
+describe('breakAway', () =>  {
+    it('Break the array and combine it with the given number',  () => {
+        expect(breakAway(([2,3,4,5], 2)).to.deep.equal([[2,3],[4,5]]))
+        expect(breakAway(([2,3,4,5,6,7], 3)).to.deep.equal([2,3],[4,5],[6] ))
+
+    })
+})

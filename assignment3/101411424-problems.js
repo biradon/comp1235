@@ -2,30 +2,30 @@
 
 // Function 1 
 
-// let radius = 9; 
-// let finalResult1 = circle(radius); 
-// console.log(finalResult1); 
+let radius = 9; 
+let finalResult1 = circle(radius); 
+console.log(finalResult1); 
 
-// function circle(radius) 
-// { 
-//     let areaResult = area(radius); 
-//     let perimeterReuslt = perimeter(radius); 
-//     return {areaResult, perimeterReuslt} 
-// }; 
+function circle(radius) 
+{ 
+    let areaResult = area(radius); 
+    let perimeterReuslt = perimeter(radius); 
+    return {areaResult, perimeterReuslt} 
+}; 
 
-// function area(radius) 
-// { 
-//     // Formula to calculate area radius^2 * pi
-//     let areaResult = Math.pow(radius,2) * Math.PI; 
-//     return areaResult.toFixed(2); 
-// } 
+function area(radius) 
+{ 
+    // Formula to calculate area radius^2 * pi
+    let areaResult = Math.pow(radius,2) * Math.PI; 
+    return areaResult.toFixed(2); 
+} 
 
-// function perimeter() 
-// { 
-//     // Formula to calculate perimeter 2 * pi * radius
-//     let perimeterResult = 2 * Math.PI * radius; 
-//     return perimeterResult.toFixed(2); 
-// } 
+function perimeter() 
+{ 
+    // Formula to calculate perimeter 2 * pi * radius
+    let perimeterResult = 2 * Math.PI * radius; 
+    return perimeterResult.toFixed(2); 
+} 
 
  
 
@@ -113,22 +113,54 @@ let JSON2 = [{
     id: 11, 
     u: "spidey"
 }];
-let JSON3 = [{
-    id: 1,
-    u: "batman"}, 
-    {id: 11,
-    u: "spidey"
-}];
 
-let pattern = /^[m-z]/;
+let JSON3 = [
+    {id: 1, u: "batman"}, 
+    {id: 11, u: "spidey"}
+];
+
+let pattern = /^[m-z]/i;
 
 
 let filteredJSON = (JSON0) => {
-    if (JSON0.id > 10 && JSON0.u == pattern.toString(JSON0.u))
+    if (JSON0.id > 10 && pattern.test(JSON0.u))
     {
-        return JSON0;
+        return true;
     }
+    return false;
 }
 
-const finalResult4 = JSON2.filter(filteredJSON);
+const finalResult4 = JSON3.filter(filteredJSON);
 console.log(finalResult4);
+
+
+// Function 5
+let sample1 = ([2,3,4,5]);
+let nsample1 = 2;
+
+let sample2 = ([2,3,4,5,6]);
+let nsample2 = 2;
+
+let sample3 = ([2,3,4,5,6,7]);
+let nsample3 = 3;
+
+let sample4 = ([2,3,4,5]);
+let nsample4 = 1;
+
+let sample5 = ([2,3,4,5,6,7]);
+let nsample5 = 7;
+
+let devidedNumber = 0;
+
+let finalResult5 = [];
+
+const breakAway = function(sample, nsample) {
+    devidedNumber = Math.ceil(sample.length / nsample);
+    for (let i = 0; i < devidedNumber; i++)
+    {
+        finalResult5[i] = sample.splice(0, nsample);
+    }
+    return finalResult5;
+}
+
+console.log(breakAway(sample4, nsample4));
