@@ -78,3 +78,57 @@ let finalResult2 = calculateSalary(days)
 console.log(finalResult2);
 
 
+
+// Function 3
+let example1 = ([1, 2, 3, 4, 5]);
+let example2 = ([-3, 0, 8, -6]);
+let example3 = ([15, 16, -100, 50]);
+
+// Create temporary array to store the value
+let newArray = [];
+
+
+let indexMultipler = (index) => {
+    for (let i = 0; i < index.length; i++)
+    {
+        // Assign for the new array to multiple value with position
+        newArray[i] = index[i] * i;
+    }
+    // Sum all of the value in array
+    const finalResult3 = newArray.reduce((begin, end) => {
+        return begin + end
+    })
+    return finalResult3;
+}
+
+let finalResult3 = indexMultipler(example1)
+console.log(finalResult3);
+
+// Function 4
+let JSON1 = [{
+    id: 1, 
+    u: "batman"
+}];
+let JSON2 = [{
+    id: 11, 
+    u: "spidey"
+}];
+let JSON3 = [{
+    id: 1,
+    u: "batman"}, 
+    {id: 11,
+    u: "spidey"
+}];
+
+let pattern = /^[m-z]/;
+
+
+let filteredJSON = (JSON0) => {
+    if (JSON0.id > 10 && JSON0.u == pattern.toString(JSON0.u))
+    {
+        return JSON0;
+    }
+}
+
+const finalResult4 = JSON2.filter(filteredJSON);
+console.log(finalResult4);

@@ -22,3 +22,9 @@ describe('calculateSalary', () =>  {
         expect(calculateSalary([8,8,8,8,8,0,0])).to.deep.equal(400)
     })
 })
+
+describe('indexMultipler', () =>  {
+    it('Multiple the array value with array position',  () => {
+        expect(indexMultipler([1, 2, 3, 4, 5])).to.deep.equal(40)
+    })
+})
