@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthough 5</title>
+    <script>
+        // Practicing Callback functions
+
+        // This function is the function that will TAKE the callback function efinition in its parameters
+        function callBacker(callback)
+        {
+            document.write("Inside the callback function" + "<br>");
+            callback("Bob");
+        }
+
+         // Practicing Callback functions
+        const namePrinter = (name) => 
+        {
+            document.write("The name is: " + name);
+        }
+
+        // Call the callbacker
+        callBacker(namePrinter);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

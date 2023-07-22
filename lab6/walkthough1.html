@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthough 1</title>
+    <script>
+        // Practice defining and calling anonymous functions
+
+        // Define the anonymous function
+        const divFunc = function (num1, num2) {
+            return num1 / num2;
+        }
+        // Call the anonymous function
+        let result = divFunc(6, 7);
+        document.write(result + "<br>");
+
+        // The line below is not a  callback
+        // A callback require a function definition as a argument to another function
+        // But below is a function call as an argument to another function
+        console.log(divFunc(8, 4));
+
+
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

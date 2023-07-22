@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthough 1</title>
+</head>
+
+<script>
+    // Practicing with our spread operator
+    // Spread operator exapnds values from arrays and objects
+
+    const Weather1 = {
+        monday: "sunny",
+        tuesday: "cloudy",
+        wednesday: "rainy"
+    };
+
+    const Weather2 = {
+        thursday: "sunny",
+        friday: "thunder storm"
+    };
+
+    const Weather = {... Weather1, ... Weather2};
+
+    document.write(Weather);
+    console.log(Weather);
+
+    // If we don't use the spread operator the 2 object will sepearately be
+    // combine to WeatherSep
+    const WeatherSep = {Weather1, Weather2}
+    console.log(WeatherSep)
+
+    const friends1 = ["Lu", "Alberto", "Lauwrence"];
+    const friends2 = ["James", "Dom"];
+
+    // If we don't use a spread operator, the entire array will be added as an element of 2 dimension arryas
+    const friends3 = ["Addul", friends1];
+
+    // Combine all the friends together into a single dimentional array 
+    const friends = [... friends2, ... friends1];
+    console.log("My friends are: ");
+    console.log(...friends);
+</script>
+<body>
+    
+</body>
+</html>

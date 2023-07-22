@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthought 2</title>
+</head>
+<body>
+
+    <script>
+        let favouriteNum = 8;
+        let heroStrenght = 10;
+
+        // Practice Break and Continue statements
+        while(favouriteNum <= 20) {
+            console.log("Number was " + favouriteNum + " and it was even");
+            //If favourite number is even, then don't increase the hero's strength
+            if(favouriteNum % 2 == 0) {
+                // If the number is even, make it odd by adding 1 to it
+                favouriteNum += 1;
+                continue;
+            }
+            // Multiply the heroStrength by 3
+            heroStrenght *= 3;
+            console.log("The heo strength has been updated to " + heroStrenght);
+            favouriteNum += 1;
+        }
+    </script>
+</body>
+</html>

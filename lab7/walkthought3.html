@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthough 3</title>
+    <script>
+        // Practicing events and event handling/listening
+        // Events: "click", "hover", "submit", "scroll", "DOMContentLoaded"
+
+
+        const alerter = function()
+        {
+            alert("Welcome");
+        }
+
+        //Listen for the DOM content being loaded. and once it's loaded have an alert with "Welcome"
+        document.addEventListener("DOMContentLoaded", () => {
+            alerter();
+
+            // We could have used getElmentById let button = document.getElementById("colorChange");
+            let colorChangeButton = document.querySelector("#colorChange");
+            console.log(colorChangeButton);
+
+            // Now add another event listener. When the colorChangeButton is clicked
+            // console.log("Change color")
+            colorChangeButton.addEventListener("click", () => {
+                console.log("Change color");
+            })
+        });
+
+        
+
+        
+
+
+
+
+    </script>
+</head>
+<body>
+    <form>
+        <button type="button" id="colorChange">Click me for color change</button>
+        <label for="username">User Name</label>
+        <input type="text" id="username" name="username">
+
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password">
+
+        <label for="submit">Submit</label>
+        <input type="submit" value="GO" id="submit" name="submit">
+    </form>
+</body>
+</html>

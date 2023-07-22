@@ -1,0 +1,46 @@
+~<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthough 2</title>
+</head>
+<script>
+    // Practicing Constructor for prototype
+    // We will usually prefer to use REGULAR functions for constructors, now arrow or anonymous
+    
+    // Generally, you want to add the properties as a parameters in the constructor so
+    // the values can be cumstomize 
+    function Animal(fur_color, num_legs)
+    {
+        this.fur_color = fur_color;
+        this.num_legs = num_legs;
+        this.limbs = {
+            long: true,
+            has_hands: false
+        },
+        this.run = function (fast = true){
+            if (fast)
+            {
+                document.write("<br>The animal with " + this.fur_color + " and " + this.num_legs + " is running fast<br>");
+            }
+            else 
+            {
+                document.write("<br>The animal with " + this.fur_color + " and " + this.num_legs + " is running slowly<br>");
+            }
+        }
+    }
+    // The new keyword is used to call the constructor in addition
+    // to the name of the constructor 
+    // which always mathces tha name of the prototype
+    const animal1 = new Animal("purple", 2);
+    // Make animal1 run slowly
+    animal1.run(false);
+
+    const jaguar = new Animal("brown", 4);
+    jaguar.run();
+</script>
+<body>
+    
+</body>
+</html>

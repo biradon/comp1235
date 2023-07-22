@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthought 1</title>
+</head>
+<body>
+
+    <script>
+        // Practice Break and Continue statements
+        while(true) {
+            // Have a popup box with an input area to ask for the user's password
+            let password = prompt("Enter your password");
+
+            // Check/validate that the string equals '4Jo99' - then leave the look
+            if(password === "4Jo99") {
+                // This will break out of the loop once the password entered is correct
+                break;
+            } else
+            {
+                //The write will not happen because the prompt prevents the rest of the code
+                // from being executed until the correct password is enter
+                // Instead we should use an <input type="text"/>
+                document.write("Inccorect password")
+            }
+        }
+
+        // Add a console log saying "Successfully signed"
+        console.log("Successfully signed");
+
+    </script>
+</body>
+</html>

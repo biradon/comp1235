@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthough 2</title>
+</head>
+<script>
+    // Practice with JSON Object
+    // This is a JSON String, we need to convert it into a JSON Object 
+    const Weather1 = '{"monday": "sunny", "tuesday": "cloudy", "wednesday": "rainy"}';
+
+    // WE don't useally hard code the JSON string, we get it from cloud service or Web API
+    const WeatherJSON = JSON.parse(Weather1);
+    console.log(WeatherJSON);
+
+    console.log("On Monday the weather will be: " + WeatherJSON.monday);
+    console.log("On Tuesday the weather will be: " + WeatherJSON.tuesday);
+
+</script>
+<body>
+    
+</body>
+</html>

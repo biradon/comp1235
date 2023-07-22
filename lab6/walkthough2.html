@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthough 2</title>
+    <script>
+        // Practicing with arrow functions
+
+        // Define an arrow function
+
+        const dividerFunc = (num1, num2) => {
+            let result = num1 / num2;
+            return result;
+        }
+
+        // Call the arrow function
+        let result = dividerFunc(7, 2);
+        document.write(result + "<br>");
+
+        document.write(dividerFunc(6, 3));
+        
+
+        // Define an arrow function with just one parameter and one line of code in the body
+        const addOne = num1 => num1++;
+
+        // Call the arrwo function
+        let result2 = addOne(5);
+        document.write(result2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

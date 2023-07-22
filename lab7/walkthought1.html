@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthough 1</title>
+    <script>
+        // Praciting methods (Function defined for an object or prototype)
+
+        // Create an object called Animal. ive it 2 properties fur_color
+        // and num_legs. Give it 1 method called run.
+
+        const Animal = {
+            fur_color:  "Brown",
+            num_legs: 4,
+            run: function(fast = true) 
+            {
+                if (fast)
+                {
+                    document.write("The animal is running fast");
+                }
+                else 
+                {
+                    document.write("The animal is runnign slowly");
+                }
+            },
+            // Add another property that is a nested object called limbs
+            limbs: {
+                long: true,
+                has_hands: false
+            }
+        }
+
+        // Call the method from the Animal objest
+        Animal.run();
+        Animal.run(false);
+        //Print out, does the animal have hands
+        document.write("<br>Does it have hands " + Animal.limbs.has_hands);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

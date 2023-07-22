@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthought 4</title>
+</head>
+<body>
+    <script>
+        // Create an Object object
+        // You can create a String object, an Array object
+
+        // Long way to create an Obect object
+        const Furniture = new Object();
+        // Add numLegs 4 and WoodType "cedar" as properties on the Furniture object
+        Furniture.numbLegs = 4;
+        Furniture.woodType = "cedar";
+
+        // Short way to create an Obect object
+        const Animal = {
+            numbLegs: 4,
+            furType: "Shaggy",
+
+        };
+
+        // Print out the number of legs of the Furniture object
+        document.write("Furnitur has " + Furniture.numbLegs + " legs");
+        document.write("Fur type of the Animal is :" + Animal.furType);
+
+        // Destructure the Animal so that we can access numLegs locally
+        let numLegs = Animal.numbLegs;
+        console.log("Numlegs is available locally as " + numLegs);
+
+        // Second way of destructure
+        let {furType} = Animal;
+        console.log("Furtype is available locally as " + furType);
+
+    </script>
+    
+</body>
+</html>

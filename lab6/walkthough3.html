@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthough 3</title>
+    <script>
+        // Praciting with default parameter
+
+        // Define an anonymous function
+        const printHello = function(name = "Bob", age = 90)
+        {
+            document.write("Hello "  + name + " your age is " + age + "<br>");
+        }
+
+        // Call the anonymous function
+        let result = printHello("Minh", 80);
+        document.write("The function returned " + result + "<br>");
+
+        // Call the anonymous function with 0 arguments, and take default parametes of "bob" and 90
+        let result2 = printHello();
+        document.write("The function returned: " + result2);
+
+
+        
+        // We CANNOT put default parameters at the beginning of the parameter list
+        // In the code below, 50 will be assigned to the parameter name, and age will be left undefined
+
+        // Define an arrow function with only 1 default parameter
+        const printHelloArr = (name, age = 90) => 
+            document.write("Hello " + name + " your age is "  + age + "<br>");
+            
+
+        // Call the arrow function with only 1 argument
+        const result3 = printHelloArr("Minh")
+        console.log("The function returned: " + result3);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
